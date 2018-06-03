@@ -1,11 +1,55 @@
-# csmd-converter
-A commmand-line tool to convert comic script markdown to other formats
+# csmd-cli
+A commmand-line tool to convert comic script markdown to other formats. The general format used for scripts is one proposed by Comics Experience.
 
 ## Install
-
+npm install strye/csmd-cli -g
 
 ## Usage
+Format of command
+csmd <fileToConvert> -t <convertionType> -o <outputFile> -m <exportMode> -c <creatorsName>
 
+### fileToConvert
+This is the path to the markdown file you wih to convert. May be a relative path.
+
+### -t convertionType
+This is the convertion module to use when converting the markdown file. Valid values are:
+
+- pdf (default): Generates a pdf file using the _Comics Experience_ script format
+- docx: Generates a word document using the _Comics Experience_ script format
+- html: Creates a generic PDF page of the script
+- txt: Generates a basic text document that removes all markdown
+
+### -o outputFile
+_Default_: "script.pdf"
+This is the filename and path for the file that is generated. This may be a relative path from the location the command is run.
+
+### -m exportMode
+This allows you to generate multiple versions of the script for special purposes. Valid values are:
+
+- s (default): script mode. This produces a full script that is ready to submit to an editor or publisher.
+- a: artist mode. This prints only the panel descriptions and artist notes. this mode allows you to review the script with the artist in mind. This helps ensure that the instructions to eth artist are clear without the dialog. 
+- l: letterer mode. This proints only the dialog and letterer notes. This mode allows you to review the script to ensure the dialog and letterer instructions are clear. This is the opposite of artist mode.
+- f: full mode. This is a special mode that will produce a formated script that includes personal notes not inteded for production. This is helpful if you want to share a copy with special notes to an indivisual. Or if you want to review a formated vestion with notes to yourself.
+
+### -c creatorsName
+_Default:_ "Anonymous"
+
+### Examples
+
+__Basic syntax with all defaults explicitly included__
+csmd script.md -t pdf -o script.pdf -m s -c 'Anonymous'
+
+__Minimum syntax. Same as above, but relying on defualt values__
+csmd script.md
+
+__Create Word Document for script__
+csmd script.md -t comxpd -o issue1.docx -m s -c 'Bob Dobbs'
+
+__Create PDF of script in ComicsExperience format with defualts__
+csmd script.md -t comxpp
+
+__Create a web page of the script complete with writters notes__
+csmd script.md -t html -o script.html -m f
 
 
 # Markdown Guide

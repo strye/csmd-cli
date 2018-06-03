@@ -21,14 +21,13 @@ var jsonRep = {
 };
 
 
-// csmd script.md -t comxpd -o issue1.docx
-// csmd script.md -t comxpd -o issue1.docx -c 'Will Strye' -m s
+// csmd script.md -t docx -o issue1.docx
+// csmd Issue1.md -t docx -o Issue1.docx -c 'Will Strye' -m s
 // csmd script.md -t docxt -o issue1.docx
 
 // csmd <file> -t pdf -o issue1.pdf
 // csmd script.md -t pdf -o issue1.pdf
-// csmd script.md -t comxp -o issue1.pdf
-// csmd paper.md -t wpdf -o paper.pdf -c 'Will Strye' -m s
+// csmd paper.md -t pdf -o paper.pdf -c 'Will Strye' -m s
 
 program
 	.arguments('<file>')
