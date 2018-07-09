@@ -43,10 +43,10 @@ __Minimum syntax. Same as above, but relying on defualt values__
 csmd script.md
 
 __Create Word Document for script__
-csmd script.md -t comxpd -o issue1.docx -m s -c 'Bob Dobbs'
+csmd script.md -t docx -o issue1.docx -m s -c 'Bob Dobbs'
 
 __Create PDF of script in ComicsExperience format with defualts__
-csmd script.md -t comxpp
+csmd script.md -t docx
 
 __Create a web page of the script complete with writters notes__
 csmd script.md -t html -o script.html -m f

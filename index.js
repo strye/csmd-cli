@@ -44,6 +44,7 @@ program
 			creator: program.creator
 		}
 		
+		//console.log(options)
 		csmdConv.Processor(file, options)
 		
 	})
