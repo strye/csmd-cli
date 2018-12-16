@@ -4,9 +4,16 @@ A commmand-line tool to convert comic script markdown to other formats. The gene
 ## Install
 npm install strye/csmd-cli -g
 
+## Force update
+npm uninstall -g strye/csmd-cli
+npm install strye/csmd-cli -g
+
 ## Usage
 Format of command
 csmd <fileToConvert> -t <convertionType> -o <outputFile> -m <exportMode> -c <creatorsName>
+
+To generate a statistics file --
+csmd <fileToConvert> -t stats -o stats.csv
 
 ### fileToConvert
 This is the path to the markdown file you wih to convert. May be a relative path.
@@ -18,6 +25,7 @@ This is the convertion module to use when converting the markdown file. Valid va
 - docx: Generates a word document using the _Comics Experience_ script format
 - html: Creates a generic PDF page of the script
 - txt: Generates a basic text document that removes all markdown
+- stats: Generates a csv file containing statistics regarding panel and dialog density
 
 ### -o outputFile
 _Default_: "script.pdf"
