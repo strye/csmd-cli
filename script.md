@@ -1,26 +1,40 @@
+---
 Title: SERIES TITLE
-Issue Title: Issue 1 - Title
-Author: Alto Boren
-Script Description: A 20 page comic about stuff.
+IssueTitle: Issue 1 - Title
+IssueNumber: 1
+Description: A 20 page comic about stuff.
 
-Draft Date: Draft 1
+Story: Bob Dobbs
+Writer: Alto Boren
+Letterer: Bob Dobbs
+Artist: Bob Dobbs
+Pencils: Bob Dobbs
+Ink: Bob Dobbs
+Color: Bob Dobbs
+Credit: Special thanks to Bob Dobbs
+
+Version: 2
+DraftInfo: 
+DraftDate: Draft 1
 Contact: foo@bar.mail
+---
 
+
+# Full Page Panel with titles
 /*
-This is a test comment
+This is a printable test comment
 */
 
 // This is the second test comment
-
-# Full Page Panel with titles
 
 ##
 
 This is a panel description.
 
-> CHARACTER ONE
+@ CHAR ONE
 Hello.
-(cont)
+
+@ CHAR ONE
 And this is how you can link multiple balloons from the same speaker.
 
 
@@ -30,24 +44,24 @@ This is another panel description.
 
 And this is the second paragraph of a panel description. Note how no special formatting is needed for paragraph breaks.
 
-> CHARACTER ONE
-Hi there.
-
 This is another panel description.
 
-/* And this is a comment, which will not appear in the exported script */
+@ CHAR ONE
+Hi there.
 
-> Character Two (OFF)
+>> This is a note to the letterer.
+
+/* And this is a third comment, which will not appear when exported in script mode */
+
+@ Char Two (OP)
 Don't start without me! I have a lot to say and I need to know that my speech will wrap properly!
 
-#
+# 2
 << This is a special note. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in suscipit purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus nec hendrerit felis. Morbi aliquam facilisis risus eu lacinia. Sed eu leo in turpis fringilla hendrerit. Ut nec accumsan nisl.
 
 ##
 Explosion that is a booming voice
 
-> Voice Over
+@ Char Three (VO)
 That's all you need to know to write a comic script in markdown.
 
-
-# End. This triggers the last page to write
